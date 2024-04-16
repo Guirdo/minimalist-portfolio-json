@@ -1,0 +1,222 @@
+{
+  "basics": {
+    "name": "Sebastián Méndez",
+    "label": "Desarrollador front-end y maestro",
+    "image": "https://res.cloudinary.com/dyuo7wfyi/image/upload/c_scale,q_auto:best,w_400/v1676650083/website/profile.webp",
+    "email": "aldo.seb.mendez@gmail.com",
+    "phone": "",
+    "url": "https://dev.guirdo.xyz",
+    "summary": "Soy un desarrollador web y maestro de programación con más de 3 años de experiencia. He participado en proyecto tanto gubernamentales como para pequeñas empresas, además de que he impartido clases a personas de distintas partes de Latino America.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Chilpancingo",
+      "countryCode": "",
+      "region": "México"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "midudev",
+        "url": "https://linkedin.com/in/midudev"
+      },
+      {
+        "network": "GitHub",
+        "username": "Guirdo",
+        "url": "https://github.com/Guirdo"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "P5js",
+      "position": "Translation Steward",
+      "url": "https://github.com/Guirdo/p5-js-ES-translation",
+      "startDate": "2024-03-01",
+      "endDate": "2024-04-30",
+      "summary": "Supervisor para las traducción al español de la documentación de la biblioteca de programación creativa p5.js. Junto a un colega supervisamos, distribuimos y dimos retroalimentación al trabajo de cinco traductores.",
+      "highlights": [
+        "Started the company"
+      ]
+    },
+    {
+      "name": "DevF",
+      "position": "Lead Frontend Architect",
+      "url": "https://devf.la",
+      "startDate": "2023-06-01",
+      "endDate": "2023-10-13",
+      "summary": "Impartí clases sobre desarrollo web a alumnos de distintas partes de Latino America, también di asesorías y fomente el uso de las más nuevas y mejores practicas en mis alumnos para que empezaran tu carrera en el desarrollo web tanto en el front-end como en el back-end.",
+      "highlights": [
+        "Started the company"
+      ]
+    },
+    {
+      "name": "Imperambiental",
+      "position": "Desarrollador Front-end",
+      "url": "https://dev.guirdo.xyz/es/projects/2022/02/15/imperambiental/",
+      "startDate": "2022-02-01",
+      "endDate": "2022-02-28",
+      "summary": "Impartí clases sobre desarrollo web a alumnos de distintas partes de Latino America, también di asesorías y fomente el uso de las más nuevas y mejores practicas en mis alumnos para que empezaran tu carrera en el desarrollo web tanto en el front-end como en el back-end.",
+      "highlights": [
+        "Started the company"
+      ]
+    },
+    {
+      "name": "Fiscalia General del Estado de Guerrero",
+      "position": "Desarrollador Full stack",
+      "startDate": "2020-09-21",
+      "endDate": "2021-01-15",
+      "summary": "Implemente un sistema de mesa de ayuda (Help Desk) para la gestión de tickets para el equipo de soporte del departamento de Tecnología y Desarrollo junto a un colega. Utilizamos MVC porque nos permitió trabajar de forma rápida y concisa con la base SQL que ya disponía el departamento.",
+      "highlights": [
+        "Started the company"
+      ]
+    }
+  ],
+  "volunteer": [{
+    "organization": "Organization",
+    "position": "Volunteer",
+    "url": "https://organization.com/",
+    "startDate": "2012-01-01",
+    "endDate": "2013-01-01",
+    "summary": "Description…",
+    "highlights": [
+      "Awarded 'Volunteer of the Month'"
+    ]
+  }],
+  "education": [{
+    "institution": "Instituto Tecnológico de Chilpancingo",
+    "url": "https://chilpancingo.tecnm.mx/",
+    "area": "Ingeniería en Sistemas Computacionales",
+    "studyType": "Bachelor",
+    "startDate": "2016-06-22",
+    "endDate": "2022-05-23",
+    "score": "92",
+    "courses": [
+      "DB1101 - Basic SQL"
+    ]
+  }],
+  "awards": [{
+    "title": "Award",
+    "date": "2014-11-01",
+    "awarder": "Company",
+    "summary": "There is no spoon."
+  }],
+  "certificates": [{
+    "name": "Certificate",
+    "date": "2021-11-07",
+    "issuer": "Company",
+    "url": "https://certificate.com"
+  }],
+  "publications": [{
+    "name": "Publication",
+    "publisher": "Company",
+    "releaseDate": "2014-10-01",
+    "url": "https://publication.com",
+    "summary": "Description…"
+  }],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend"
+      ]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+      ]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones", "Colaboración", "Código Fuente"
+      ]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Idioma nativo"
+    },
+    {
+      "language": "English",
+      "fluency": "Avanzado"
+    }
+  ],
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }],
+  "projects": [
+    {
+      "name": "cadaver-exquisito",
+      "isActive": true,
+      "description": "Escribe junto a tus amigos un cuento o un poema, pero solo podras ver lo que la personas en el turno anterior escribió.",
+      "highlights": [
+        "Juego de palabras surrealista",
+        "En desarrollo"
+      ],
+      "url": "https://www.cadaverexquisito.xyz/"
+    }
+  ]
+}
