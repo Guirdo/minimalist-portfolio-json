@@ -1,0 +1,58 @@
+---
+import { languages } from '../i18n/ui';
+import { useTranslatedPath, getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url)
+const translatePath = useTranslatedPath(lang)
+const t = useTranslations(lang)
+---
+<div class="container">
+  <span>{t('selectLang')}</span>
+  <div class="button-group">
+    {Object.entries(languages).map(([language, label]) => (
+      <a
+        class:list={[
+          "link-as-button", 
+          {active: language === lang}
+        ]}
+        href={translatePath('/', language)}
+      >
+        {label}
+      </a>
+    ))}
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap:0.5rem;
+    align-items: center;
+  }
+
+  .button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    overflow: hidden;
+  }
+
+  .link-as-button {
+    padding: 0.25rem;
+    background-color: #eee;
+    border: none;
+    border-right: 1px solid #cccccc;
+    color: inherit;
+  }
+
+  .link-as-button:last-child{
+    border: none;
+  }
+
+  .active {
+    background-color: #ccc;
+  }
+</style>
