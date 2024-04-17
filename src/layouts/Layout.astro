@@ -1,17 +1,21 @@
 ---
-import { basics } from "@cv"
+import Footer from "@/components/Footer.astro"
+import type { Basics } from "@/cv"
+import { getLangFromUrl } from "@/i18n/utils"
 
 interface Props {
-  title: string
+  title: string,
+  basics: Basics
 }
 
-const { title } = Astro.props
-
+const { title, basics } = Astro.props
 const { image, summary, url } = basics
+
+const lang = getLangFromUrl(Astro.url)
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
@@ -35,6 +39,8 @@ const { image, summary, url } = basics
   </head>
   <body>
     <slot />
+
+    <Footer />
   </body>
 </html>
 
@@ -94,7 +100,6 @@ const { image, summary, url } = basics
 
   p {
     color: #666;
-    font-size: 0.9rem;
     line-height: 1.5;
     margin: 0;
     text-wrap: pretty;
