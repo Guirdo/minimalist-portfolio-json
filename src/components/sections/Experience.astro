@@ -1,14 +1,17 @@
 ---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils"
 import Section from "../Section.astro"
 
-import { work } from "@cv"
+const { work } = Astro.props
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
-<Section title="Experiencia laboral">
+<Section title={t('experience')}>
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
+        ({ name, startDate, endDate, position, summary, url }) => {
           const startYear = new Date(startDate).getFullYear()
           const endYear =
             endDate != null ? new Date(endDate).getFullYear() : "Actual"
@@ -19,9 +22,14 @@ import { work } from "@cv"
                 <header>
                   <div>
                     <h3>
+                      {
+                        url ? 
                       <a href={url} title={`Ver ${name}`} target="_blank">
                         {name}
-                      </a>
+                      </a> :
+                      <>{name}</>
+                      }
+                      
                     </h3>
                     <h4>{position}</h4>
                   </div>
@@ -57,12 +65,14 @@ import { work } from "@cv"
   ul {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 1rem;
   }
 
   article h3 {
     font-weight: 500;
     color: #111;
+    margin-bottom: 0.25rem;
+    font-size: 1.35rem;
   }
 
   article a {
@@ -76,18 +86,19 @@ import { work } from "@cv"
   article h4 {
     color: #222;
     font-weight: 400;
+    font-size: 1.25rem;
   }
 
   header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
   }
 
   time {
     color: #555;
-    font-size: 0.85rem;
+  
     min-width: 102px;
     cursor: default;
   }
@@ -121,7 +132,7 @@ import { work } from "@cv"
     position: relative;
   }
 
-  @media (width <= 700px) {
+  @media (width <= 44rem) {
     time {
       text-align: right;
     }
