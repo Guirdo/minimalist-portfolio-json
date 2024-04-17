@@ -1,10 +1,13 @@
 ---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils"
 import Section from "../Section.astro"
 
-import { education } from "@cv"
+const { education } = Astro.props
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
-<Section title="Educación">
+<Section title={t('education')}>
   <ul>
     {
       education.map(({ institution, startDate, endDate, area }) => {
