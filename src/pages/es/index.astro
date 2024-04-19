@@ -8,7 +8,7 @@ import Hero from "@/components/sections/Hero.astro"
 import Projects from "@/components/sections/Projects.astro"
 import Skills from "@/components/sections/Skills.astro"
 
-import { basics,work,education,projects,skills } from "cv-en.json"
+import { basics,work, education,projects,skills} from "cv-es.json"
 import { getLangFromUrl, useTranslations } from "@/i18n/utils"
 const { name, label } = basics
 
@@ -28,7 +28,6 @@ const t = useTranslations(lang)
     <Projects projects={projects}/>
     <Skills skills={skills}/>
   </main>
-
 </Layout>
 
 <style>
