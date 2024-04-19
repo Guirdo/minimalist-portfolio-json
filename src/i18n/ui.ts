@@ -16,6 +16,10 @@ export const ui = {
         projects: 'Projects',
         skills: 'Skills',
         selectLang: 'Select a language:',
+        sendEmail: 'Send an email to %s',
+        visitProfile: "Check %s's profile on ",
+        checkCode: 'Check source code of %s',
+        checkWebsite: 'Check $s website',
     },
     es: {
         hello: 'Hola %s, como estas?',
@@ -26,5 +30,9 @@ export const ui = {
         projects: 'Proyectos',
         skills: 'Habilidades',
         selectLang: 'Selecciona un lenguaje:',
+        sendEmail: 'Enviar un correo electrónico a %s',
+        visitProfile: "Visita el perfil de %s en ",
+        checkCode: 'Revisa el código fuente de %s',
+        checkWebsite: 'Visita el sitio web de $s',
     }
   } as const;
