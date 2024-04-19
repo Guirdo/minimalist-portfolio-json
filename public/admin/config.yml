@@ -9,9 +9,81 @@ collections:
   - name: "cv"
     label: "Curriculum Vitae"
     files:
-      - label: "CV in english"
+      - label: "English"
         name: "cv-en"
         file: "./cv-en.json"
+        format: "json"
+        extension: "json"
+        fields:
+          - label: "Basics"
+            name: "basics"
+            widget: "object"
+            fields:
+              - {label: "Full name", name: "name", widget: "string"}
+              - {label: "Headline", name: "label", widget: "string"}
+              - {label: "Profile photo", name: "image", widget: "string", hint: "Paste an URL"}
+              - {label: "Summary", name: "summary", widget: "text"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Phone number", name: "phone", widget: "string", required: false}
+              - {label: "Website", name: "url", widget: "string", required: false}
+              - label: "Location"
+                name: "location"
+                widget: "object"
+                fields:
+                  - {label: "Address", name: "address", widget: "string", required: false}
+                  - {label: "Postal code", name: "postalCode", widget: "string", required: false}
+                  - {label: "City", name: "city", widget: "string", required: false}
+                  - {label: "Country Code", name: "countryCode", widget: "string", default: "MX", required: false}
+                  - {label: "Region", name: "Region", widget: "string", default: "Mexico"}
+              - label: "Profiles"
+                name: profiles
+                widget: "list"
+                fields:
+                  - {label: "Network", name: "network", widget: "string"}
+                  - {label: "Username", name: "username", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          - label: "Work experience"
+            name: "work"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Position", name: "position", widget: "string"}
+              - {label: "Start date", name: "startDate", widget: "datetime", date_format: "YYYY-MM-DD"}
+              - {label: "End date", name: "endDate", widget: "datetime", date_format: "YYYY-MM-DD"}
+              - {label: "Summary", name: "summary", widget: "text"}
+              - {label: "URL", name: "url", widget: "string"}
+              - {label: "Highlights", name: "highlights", widget: "list"}   
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - {label: "Institution", name: "institution", widget: "string"}
+              - {label: "URL", name: "url", widget: "string", required: false}
+              - {label: "Area", name: "area", widget: "string"}
+              - {label: "Study type", name: "studyType", widget: "string"}
+              - {label: "Start date", name: "startDate", widget: "datetime", date_format: "YYYY-MM-DD"}
+              - {label: "End date", name: "endDate", widget: "datetime", date_format: "YYYY-MM-DD"}
+              - {label: "Score", name: "score", widget: "number", required: false}
+              - {label: "Course", name: "courses", widget: "list", required: false}
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Is it active", name: "isActive", widget: "boolean", default: true}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "URL", name: "url", widget: "string"}
+              - {label: "Highlights", name: "highlights", widget: "list"}
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Lever", name: "level", widget: "string", required: false}
+              - {label: "Keywords", name: "keywords", widget: "list", required: false}
+      - label: "Español"
+        name: "cv-es"
+        file: "./cv-es.json"
         format: "json"
         extension: "json"
         fields:
