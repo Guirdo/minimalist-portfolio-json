@@ -11,11 +11,11 @@ import Git from "@/icons/git.astro"
 import GitHub from "@/icons/GitHub.astro"
 import Tailwind from "@/icons/tailwind.astro"
 import Next from "@/icons/next.astro"
-import { skills } from "@cv"
 import Swift from "@/icons/swift.astro"
 import SwiftUI from "@/icons/swiftui.astro"
 import Kotlin from "@/icons/kotlin.astro"
 import Flutter from "@/icons/flutter.astro"
+import { getLangFromUrl, useTranslations } from "@/i18n/utils"
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
@@ -34,9 +34,14 @@ const SKILLS_ICONS: Record<string, any> = {
   Kotlin,
   Flutter,
 }
+
+const {skills} = Astro.props
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
-<Section title="Habilidades">
+<Section title={t('skills')}>
   <ul>
     {
       skills.map(({ name }) => {
@@ -56,19 +61,19 @@ const SKILLS_ICONS: Record<string, any> = {
 <style>
   ul {
     display: inline-flex;
-    gap: 8px;
+    gap: 0.5rem;
     flex-wrap: wrap;
   }
 
   li {
     align-items: center;
     background: #eee;
-    border-radius: 6px;
+    border-radius: 0.37rem;
     color: black;
     display: flex;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 500;
-    gap: 4px;
+    gap: 0.25rem;
     padding: 0.2rem 0.6rem;
   }
 </style>
