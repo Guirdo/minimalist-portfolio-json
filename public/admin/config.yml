@@ -42,5 +42,43 @@ collections:
                   - {label: "Network", name: "network", widget: "string"}
                   - {label: "Username", name: "username", widget: "string"}
                   - {label: "URL", name: "url", widget: "string"}
-                    
+          - label: "Work experience"
+            name: "work"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Position", name: "position", widget: "string"}
+              - {label: "Start date", name: "startDate", widget: "datetime", date_format: "YYYY-MM-DD"}
+              - {label: "End date", name: "endDate", widget: "datetime", date_format: "YYYY-MM-DD"}
+              - {label: "Summary", name: "summary", widget: "text"}
+              - {label: "URL", name: "url", widget: "string"}
+              - {label: "Highlights", name: "highlights", widget: "list"}   
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - {label: "Institution", name: "institution", widget: "string"}
+              - {label: "URL", name: "url", widget: "string", required: false}
+              - {label: "Area", name: "area", widget: "string"}
+              - {label: "Study type", name: "studyType", widget: "string"}
+              - {label: "Start date", name: "startDate", widget: "datetime", date_format: "YYYY-MM-DD"}
+              - {label: "End date", name: "endDate", widget: "datetime", date_format: "YYYY-MM-DD"}
+              - {label: "Score", name: "score", widget: "number", required: false}
+              - {label: "Course", name: "courses", widget: "list", required: false}
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Is it active", name: "isActive", widget: "boolean", default: true}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "URL", name: "url", widget: "string"}
+              - {label: "Highlights", name: "highlights", widget: "list"}
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Lever", name: "level", widget: "string", required: false}
+              - {label: "Keywords", name: "keywords", widget: "list", required: false}
 
