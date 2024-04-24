@@ -1,8 +1,9 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils"
 import Section from "../Section.astro"
+import getContext from "@astro-utils/context"
 
-const { education } = Astro.props
+const { education } = getContext(Astro)
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 ---

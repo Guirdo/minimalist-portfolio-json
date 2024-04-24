@@ -1,35 +1,40 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Context from "@astro-utils/context/Context.astro";
+import Layout from "@/layouts/Layout.astro";
 
-import About from "@/components/sections/About.astro"
-import Education from "@/components/sections/Education.astro"
-import Experience from "@/components/sections/Experience.astro"
-import Hero from "@/components/sections/Hero.astro"
-import Projects from "@/components/sections/Projects.astro"
-import Skills from "@/components/sections/Skills.astro"
+import About from "@/components/sections/About.astro";
+import Education from "@/components/sections/Education.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Skills from "@/components/sections/Skills.astro";
 
-import { basics,work,education,projects,skills } from "cv-en.json"
-import { getLangFromUrl, useTranslations } from "@/i18n/utils"
-const { name, label } = basics
+import { basics, work, education, projects, skills } from "cv-en.json";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+const { name, label } = basics;
 
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Layout
-  title={`${t('curriculum',name)} - ${label}`}
+<Context
   basics={basics}
+  work={work}
+  education={education}
+  projects={projects}
+  skills={skills}
 >
-  <main>
-    <Hero basics={basics}/>
-    <About basics={basics}/>
-    <Experience work={work}/>
-    <Education education={education}/>
-    <Projects projects={projects}/>
-    <Skills skills={skills}/>
-  </main>
-
-</Layout>
+  <Layout title={`${t("curriculum", name)} - ${label}`}>
+    <main>
+      <Hero />
+      <About />
+      <Experience />
+      <Education />
+      <Projects />
+      <Skills />
+    </main>
+  </Layout>
+</Context>
 
 <style>
   main {

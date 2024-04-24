@@ -2,8 +2,9 @@
 import GitHub from "@/icons/GitHub.astro"
 import Section from "../Section.astro"
 import { getLangFromUrl, useTranslations } from "@/i18n/utils"
+import getContext from "@astro-utils/context"
 
-const { projects } = Astro.props
+const { projects } = getContext(Astro)
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)

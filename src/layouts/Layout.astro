@@ -1,17 +1,17 @@
 ---
-import Footer from "@/components/Footer.astro"
-import type { Basics } from "@/cv"
-import { getLangFromUrl } from "@/i18n/utils"
+import getContextProps from "@astro-utils/context";
+import Footer from "@/components/Footer.astro";
+import { getLangFromUrl } from "@/i18n/utils";
 
 interface Props {
-  title: string,
-  basics: Basics
+  title: string;
 }
 
-const { title, basics } = Astro.props
-const { image, summary, url } = basics
+const { title } = Astro.props;
+const { basics } = getContextProps(Astro);
+const { image, summary, url } = basics;
 
-const lang = getLangFromUrl(Astro.url)
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
@@ -31,13 +31,14 @@ const lang = getLangFromUrl(Astro.url)
     <meta property="og:image" content="" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content={url.split("//")[1] ?? ''} />
+    <meta property="twitter:domain" content={url.split("//")[1] ?? ""} />
     <meta property="twitter:url" content={url} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={summary} />
     <meta name="twitter:image" content="" />
 
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
   </head>
   <body>
     <slot />
@@ -139,5 +140,18 @@ const lang = getLangFromUrl(Astro.url)
     article {
       break-inside: avoid;
     }
+  }
+
+  .icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    font-size: 1rem;
   }
 </style>

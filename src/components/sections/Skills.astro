@@ -16,6 +16,7 @@ import SwiftUI from "@/icons/swiftui.astro"
 import Kotlin from "@/icons/kotlin.astro"
 import Flutter from "@/icons/flutter.astro"
 import { getLangFromUrl, useTranslations } from "@/i18n/utils"
+import getContext from "@astro-utils/context"
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
@@ -35,7 +36,7 @@ const SKILLS_ICONS: Record<string, any> = {
   Flutter,
 }
 
-const {skills} = Astro.props
+const {skills} = getContext(Astro)
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
