@@ -109,33 +109,28 @@
     }
   ],
   "basics": {
-    "summary": "+15 years of experience as a web developer. Currently I am a content creator and development dommunicator. I live in Barcelona, Spain. I have worked in different environments: from accelerating the development of start-ups to leading teams in multinational companies.",
+    "summary": "I'm a web developer and programming teacher with three years of experiencie. I've participated either goverment and small business projects. I've also teach web development classes to people from different parts of Latin America.",
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "midudev",
-        "url": "https://linkedin.com/in/midudev"
-      },
-      {
-        "network": "X",
-        "username": "midudev",
-        "url": "https://x.com/midudev"
+        "username": "Seb Méndez",
+        "url": "https://linkedin.com/in/seb-mendez"
       },
       {
         "network": "GitHub",
-        "username": "midudev",
-        "url": "https://github.com/midudev"
+        "username": "Guirdo",
+        "url": "https://github.com/Guirdo"
       }
     ],
     "name": "Sebastián Méndez",
     "phone": "",
-    "url": "https://midu.dev",
-    "label": "Web developer and cybernaut",
+    "url": "https://dev.guirdo.xyz",
+    "label": "Web developer",
     "location": {
       "address": "",
-      "postalCode": "08820",
-      "city": "el Prat de Llobregat",
-      "countryCode": "ES",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "MX",
       "region": "Spain",
       "Region": "Mexico"
     },
