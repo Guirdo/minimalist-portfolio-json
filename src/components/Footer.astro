@@ -1,37 +1,14 @@
 ---
 import LanguagePicker from "./LanguagePicker.astro";
-import Menu from "@/icons/Menu.astro";
+import MenuDialog from "./MenuDialog.astro";
 ---
 
 <footer class="no-print">
-    <button id="menuBtn">
-        <Menu />
-        Menú
-    </button>
+    <MenuDialog />
     <LanguagePicker />
 </footer>
 
 <style>
-    #menuBtn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap:0.25rem;
-        background-color: #eee;
-        border: 1px solid #ccc;
-        padding: 0.25rem;
-        border-radius: 0.25rem;
-        font-weight: 500;
-        font-size: 1rem;
-    }
-
-    #menuBtn > svg {
-        width: 0.9em;
-        height: 0.9em;
-        fill: currentcolor;
-        margin-right: 0.5em;
-    }
-
     @keyframes fadeIn {
         from {
             opacity: 0;
