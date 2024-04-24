@@ -20,6 +20,11 @@ export const ui = {
         visitProfile: "Check %s's profile on ",
         checkCode: 'Check source code of %s',
         checkWebsite: 'Check $s website',
+        contactMe: 'Contact me!',
+        printCV:'Print CV',
+        sendMeEmail: 'Send me an email',
+        menu: 'Menu',
+        credits: 'Credits',
     },
     es: {
         hello: 'Hola %s, como estas?',
@@ -34,5 +39,10 @@ export const ui = {
         visitProfile: "Visita el perfil de %s en ",
         checkCode: 'Revisa el código fuente de %s',
         checkWebsite: 'Visita el sitio web de $s',
+        contactMe: '¡Contáctame!',
+        printCV:'Imprimir CV',
+        sendMeEmail: 'Envíame un correo',
+        menu: 'Menú',
+        credits: 'Créditos',
     }
   } as const;
