@@ -2,10 +2,10 @@
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import Menu from "@/icons/Menu.astro";
 import Printer from "@/icons/Printer.astro";
-import SquareX from '@/icons/SquareX.astro'
+import SquareX from "@/icons/SquareX.astro";
 import getContext from "@astro-utils/context";
 
-const { basics } = getContext(Astro)
+const { basics } = getContext(Astro);
 const { profiles, email } = basics;
 
 const lang = getLangFromUrl(Astro.url);
@@ -19,11 +19,8 @@ const t = useTranslations(lang);
 
 <dialog id="menuDialog">
     <div>
-        <button
-            id="closeBtn"
-            class="icon-button"
-        >
-            <SquareX size={20}/>
+        <button id="closeBtn" class="icon-button">
+            <SquareX size={20} />
         </button>
 
         <div>
@@ -74,8 +71,8 @@ const t = useTranslations(lang);
                         This is a{" "}
                         <a href="https://github.com/midudev/minimalist-portfolio-json">
                             midudev's repo
-                        </a>{" "} fork,
-                        which was inspired by the{" "}
+                        </a>{" "}
+                        fork, which was inspired by the{" "}
                         <a href="https://github.com/BartoszJarocki/cv">
                             Bartosz Jarocki's project.
                         </a>
@@ -86,13 +83,11 @@ const t = useTranslations(lang);
     </div>
 </dialog>
 
-<script>
-    const menuDialog = document.querySelector(
-        "#menuDialog",
-    ) as HTMLDialogElement;
+<script is:inline>
+    const menuDialog = document.querySelector("#menuDialog");
 
-    const closeBtn = document.querySelector("#closeBtn") as HTMLButtonElement;
-    const menuBtn = document.querySelector("#menuBtn") as HTMLButtonElement;
+    const closeBtn = document.querySelector("#closeBtn");
+    const menuBtn = document.querySelector("#menuBtn");
 
     menuBtn.addEventListener("click", () => menuDialog.showModal());
     closeBtn.addEventListener("click", () => menuDialog.close());
